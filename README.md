@@ -1,159 +1,85 @@
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- NGUYỄN NGỌC ANH TÚ · CYBERSECURITY · DFIR · DETECTION       -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════ -->
+<!-- ekaznyra · NGUYỄN NGỌC ANH TÚ · Cybersecurity Researcher        -->
+<!-- Theme: NEON CYBERDECK · terminal aesthetic                       -->
+<!-- ════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-  <img src="assets/header-dark.svg?v=18" width="100%" alt="ekaznyra · Nguyen Ngoc Anh Tu · Cybersecurity Researcher"/>
+  <img src="assets/header.svg" width="100%" alt="ekaznyra — Nguyễn Ngọc Anh Tú — Cybersecurity Researcher"/>
 </div>
 
-<br>
-
-<!-- ─── DYNAMIC HACKER TERMINAL ─────────────────────────────────── -->
-<div align="center">
-  <img src="assets/terminal.svg" width="90%" alt="Recent Activity Terminal"/>
-</div>
-
-<br>
-
-<!-- ─── SECTION: ABOUT ──────────────────────────────────────────── -->
+<br/>
 
 <div align="center">
-  <img src="assets/divider-dark.svg?v=18" width="60%" alt="divider"/>
+  <img src="assets/about.svg" width="100%" alt="About — whoami"/>
 </div>
 
-<br>
+<br/>
 
 <div align="center">
-  <img src="assets/about-dark.svg?v=18" width="100%" alt="About"/>
+  <img src="assets/projects.svg" width="100%" alt="Featured Projects"/>
 </div>
 
-<!-- ─── SECTION: CAPABILITY MAP ─────────────────────────────────── -->
+<br/>
 
 <div align="center">
-  <img src="assets/skillmap-dark.svg?v=18" width="100%" alt="Skills"/>
+  <img src="assets/arsenal.svg" width="100%" alt="Arsenal · Stack"/>
 </div>
 
-<!-- ─── SECTION: ARSENAL ────────────────────────────────────────── -->
+<br/>
+
+<!-- ─── STATS ──────────────────────────────────────────────────── -->
 
 <div align="center">
-  <img src="assets/arsenal-dark.svg?v=18" width="100%" alt="Arsenal · Tools & Tech Stack"/>
+  <code>ekaznyra@sec:~$ git log --stat --graph</code>
 </div>
 
-<br>
-
-<!-- ─── TECH STACK BADGES (black + champagne gold) ──────────────── -->
+<br/>
 
 <div align="center">
-
-  <img src="https://img.shields.io/badge/Python-0a0a0c?style=for-the-badge&logo=python&logoColor=caa84d&labelColor=0a0a0c" alt="Python"/>
-  <img src="https://img.shields.io/badge/Bash-0a0a0c?style=for-the-badge&logo=gnubash&logoColor=caa84d&labelColor=0a0a0c" alt="Bash"/>
-  <img src="https://img.shields.io/badge/PowerShell-0a0a0c?style=for-the-badge&logo=powershell&logoColor=caa84d&labelColor=0a0a0c" alt="PowerShell"/>
-  <img src="https://img.shields.io/badge/Linux-0a0a0c?style=for-the-badge&logo=linux&logoColor=caa84d&labelColor=0a0a0c" alt="Linux"/>
-  <img src="https://img.shields.io/badge/Docker-0a0a0c?style=for-the-badge&logo=docker&logoColor=caa84d&labelColor=0a0a0c" alt="Docker"/>
-  <img src="https://img.shields.io/badge/Git-0a0a0c?style=for-the-badge&logo=git&logoColor=caa84d&labelColor=0a0a0c" alt="Git"/>
-
-  <br><br>
-
-  <img src="https://img.shields.io/badge/Splunk-0a0a0c?style=for-the-badge&logo=splunk&logoColor=caa84d&labelColor=0a0a0c" alt="Splunk"/>
-  <img src="https://img.shields.io/badge/Elastic-0a0a0c?style=for-the-badge&logo=elastic&logoColor=caa84d&labelColor=0a0a0c" alt="Elastic"/>
-  <img src="https://img.shields.io/badge/Wireshark-0a0a0c?style=for-the-badge&logo=wireshark&logoColor=caa84d&labelColor=0a0a0c" alt="Wireshark"/>
-  <img src="https://img.shields.io/badge/YARA-0a0a0c?style=for-the-badge&logo=yara&logoColor=caa84d&labelColor=0a0a0c" alt="YARA"/>
-  <img src="https://img.shields.io/badge/Sigma-0a0a0c?style=for-the-badge&logoColor=caa84d&labelColor=0a0a0c" alt="Sigma"/>
-  <img src="https://img.shields.io/badge/MITRE%20ATT%26CK-0a0a0c?style=for-the-badge&logo=mitre&logoColor=caa84d&labelColor=0a0a0c" alt="MITRE ATT&CK"/>
-
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=ekaznyra&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&title_color=22d3ee&icon_color=ff5cf2&text_color=9aa6b8&bg_color=0d1117" alt="GitHub Stats"/>
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ekaznyra&layout=compact&hide_border=true&title_color=22d3ee&text_color=9aa6b8&bg_color=0d1117" alt="Top Languages"/>
 </div>
 
-<br>
-
-<!-- ─── SECTION: TIMELINE ───────────────────────────────────────── -->
+<br/>
 
 <div align="center">
-  <img src="assets/timeline-dark.svg?v=18" width="100%" alt="Journey"/>
+  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=ekaznyra&bg_color=0d1117&color=22d3ee&line=22d3ee&point=ff5cf2&area=true&hide_border=true" alt="Contribution Activity"/>
 </div>
 
-<!-- ─── SECTION: METRICS ────────────────────────────────────────── -->
+<br/>
+
+<!-- ─── CONNECT ────────────────────────────────────────────────── -->
 
 <div align="center">
-  <img src="assets/divider-dark.svg?v=18" width="60%" alt="divider"/>
+  <code>ekaznyra@sec:~$ ./connect.sh</code>
 </div>
 
-<br>
-
-<div align="center">
-  <img src="assets/metrics-dark.svg?v=18" width="100%" alt="Metrics · Language Mix & Contribution Activity"/>
-</div>
-
-<br>
-
-<div align="center">
-  <a href="https://github.com/ekaznyra">
-    <img src="https://github-readme-stats.vercel.app/api?username=ekaznyra&show_icons=true&title_color=caa84d&text_color=e0e0e0&icon_color=caa84d&bg_color=0a0a0c&hide_border=true&include_all_commits=true&count_private=true&disable_animations=false" alt="GitHub Stats" height="195"/>
-  </a>
-  <a href="https://github.com/ekaznyra">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ekaznyra&layout=compact&title_color=caa84d&text_color=e0e0e0&bg_color=0a0a0c&hide_border=true" alt="Top Languages" height="195"/>
-  </a>
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ekaznyra&bg_color=0a0a0c&color=caa84d&line=caa84d&point=ffffff&area=true&hide_border=true" alt="Activity Graph" width="80%"/>
-</div>
-
-<br>
-
-<!-- ─── 3D CONTRIBUTION GRAPH ─────────────────────────────────────── -->
-<div align="center">
-  <img src="profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D Contribution Graph"/>
-</div>
-
-<br>
-
-<!-- ─── CYBER SNAKE ───────────────────────────────────────────────── -->
-<div align="center">
-  <img src="assets/github-snake-dark.svg" width="100%" alt="Contribution Snake"/>
-</div>
-
-<br>
-
-<!-- ─── SECTION: CONNECT ────────────────────────────────────────── -->
-
-<div align="center">
-  <img src="assets/divider-dark.svg?v=18" width="60%" alt="divider"/>
-</div>
-
-<br>
+<br/>
 
 <div align="center">
   <a href="mailto:anhtunguyen.sec@proton.me">
-    <img src="assets/connect-dark.svg?v=18" width="100%" alt="Connect"/>
+    <img src="https://img.shields.io/badge/ProtonMail-0d1117?style=for-the-badge&logo=protonmail&logoColor=22d3ee&labelColor=0d1117" alt="ProtonMail"/>
   </a>
-  
-  <br><br>
-
-  <a href="mailto:anhtunguyen.sec@proton.me">
-    <img src="https://img.shields.io/badge/ProtonMail-0a0a0c?style=for-the-badge&logo=protonmail&logoColor=caa84d&labelColor=0a0a0c" alt="ProtonMail"/>
+  <a href="https://nguyenngocanhtu.software/">
+    <img src="https://img.shields.io/badge/Website-0d1117?style=for-the-badge&logo=hugo&logoColor=22d3ee&labelColor=0d1117" alt="Website"/>
   </a>
   <a href="https://github.com/ekaznyra">
-    <img src="https://img.shields.io/badge/GitHub-0a0a0c?style=for-the-badge&logo=github&logoColor=caa84d&labelColor=0a0a0c" alt="GitHub"/>
+    <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=22d3ee&labelColor=0d1117" alt="GitHub"/>
   </a>
   <a href="https://t.me/ekaznyra">
-    <img src="https://img.shields.io/badge/Telegram-0a0a0c?style=for-the-badge&logo=telegram&logoColor=caa84d&labelColor=0a0a0c" alt="Telegram"/>
+    <img src="https://img.shields.io/badge/Telegram-0d1117?style=for-the-badge&logo=telegram&logoColor=22d3ee&labelColor=0d1117" alt="Telegram"/>
   </a>
   <a href="https://linkedin.com/in/ekaznyra">
-    <img src="https://img.shields.io/badge/LinkedIn-0a0a0c?style=for-the-badge&logo=linkedin&logoColor=caa84d&labelColor=0a0a0c" alt="LinkedIn"/>
+    <img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=22d3ee&labelColor=0d1117" alt="LinkedIn"/>
   </a>
 
-  <br><br>
+  <br/><br/>
 
-  <img src="https://komarev.com/ghpvc/?username=ekaznyra&style=for-the-badge&color=caa84d&labelColor=0a0a0c&label=VIEWS" alt="Profile Views"/>
-
+  <img src="https://komarev.com/ghpvc/?username=ekaznyra&style=for-the-badge&color=22d3ee&labelColor=0d1117&label=VISITORS" alt="Profile Views"/>
 </div>
 
-<br>
-
-<!-- ─── FOOTER ──────────────────────────────────────────────────── -->
+<br/>
 
 <div align="center">
-  <img src="assets/footer-dark.svg?v=18" width="100%" alt="Understand · Detect · Defend"/>
+  <img src="assets/footer.svg" width="100%" alt="Understand · Detect · Defend"/>
 </div>

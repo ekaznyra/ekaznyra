@@ -1,0 +1,96 @@
+<svg viewBox="0 0 900 290" width="900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ekaznyra — NGUYỄN NGỌC ANH TÚ — Cybersecurity Researcher terminal header">
+  <defs>
+    <linearGradient id="ncd-bgg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d111a"/>
+      <stop offset="1" stop-color="#090c12"/>
+    </linearGradient>
+    <linearGradient id="ncd-name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.62" stop-color="#7fe9f4"/>
+      <stop offset="1" stop-color="#ff5cf2"/>
+    </linearGradient>
+    <linearGradient id="ncd-bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2030"/>
+      <stop offset="1" stop-color="#141926"/>
+    </linearGradient>
+    <pattern id="ncd-scan" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="3" fill="none"/>
+      <rect width="3" height="1" y="0" fill="#ffffff" opacity="0.022"/>
+    </pattern>
+    <filter id="ncd-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="ncd-clip"><rect x="18" y="14" width="864" height="262" rx="12"/></clipPath>
+    <style>
+      .mono{font-family:"Courier New",Consolas,ui-monospace,monospace;}
+      @keyframes ncd-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+      @keyframes ncd-flick{0%,97%,100%{opacity:.6}98%{opacity:.85}99%{opacity:.5}}
+      .ncd-cursor{animation:ncd-blink 1.05s steps(1) infinite;}
+      .ncd-scanwrap{animation:ncd-flick 6s ease-in-out infinite;}
+      @media (prefers-reduced-motion:reduce){.ncd-cursor{animation:none}.ncd-scanwrap{animation:none}}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="290" fill="#0d1117"/>
+
+  <!-- window body -->
+  <rect x="18" y="14" width="864" height="262" rx="12" fill="url(#ncd-bgg)" stroke="#222b3d" stroke-width="1.2"/>
+  <rect x="18" y="14" width="864" height="262" rx="12" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.16"/>
+
+  <g clip-path="url(#ncd-clip)">
+    <!-- scanlines -->
+    <g class="ncd-scanwrap"><rect x="18" y="14" width="864" height="262" fill="url(#ncd-scan)"/></g>
+    <!-- ambient corner glows -->
+    <circle cx="120" cy="250" r="160" fill="#22d3ee" opacity="0.05"/>
+    <circle cx="800" cy="70" r="150" fill="#ff00ff" opacity="0.045"/>
+
+    <!-- title bar -->
+    <rect x="18" y="14" width="864" height="40" fill="url(#ncd-bar)"/>
+    <line x1="18" y1="54" x2="882" y2="54" stroke="#283246" stroke-width="1"/>
+    <circle cx="44" cy="34" r="6" fill="#ff5f56"/>
+    <circle cx="64" cy="34" r="6" fill="#ffbd2e"/>
+    <circle cx="84" cy="34" r="6" fill="#27c93f"/>
+    <text x="450" y="39" text-anchor="middle" class="mono" font-size="13.5" fill="#9aa6b8" letter-spacing="1">ekaznyra@sec</text>
+    <text x="862" y="39" text-anchor="end" class="mono" font-size="12.5" fill="#22d3ee" opacity="0.75">— zsh</text>
+  </g>
+
+  <!-- terminal content -->
+  <g class="mono">
+    <!-- prompt line -->
+    <text x="44" y="92" font-size="14">
+      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#7d8590">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#7d8590">$ </tspan><tspan fill="#e6edf3">whoami --full</tspan>
+    </text>
+
+    <!-- the name headline -->
+    <text x="44" y="142" font-size="31" font-weight="700" letter-spacing="2.5" fill="url(#ncd-name)" filter="url(#ncd-glow)">NGUYỄN NGỌC ANH TÚ</text>
+    <text x="46" y="166" font-size="13.5" fill="#7d8590">// alias: </text>
+    <text x="118" y="166" font-size="13.5" fill="#ff5cf2">ekaznyra</text>
+
+    <!-- role line -->
+    <text x="44" y="198" font-size="13.5">
+      <tspan fill="#22d3ee">role</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">Cybersecurity Researcher</tspan><tspan fill="#7d8590"> · </tspan><tspan fill="#9aa6b8">DFIR · Detection Engineering · Threat Hunting</tspan>
+    </text>
+
+    <!-- tagline -->
+    <text x="44" y="223" font-size="13.5">
+      <tspan fill="#22d3ee">motto</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#ff5cf2">"Understand · Detect · Defend"</tspan>
+    </text>
+
+    <!-- tech stack as comment -->
+    <text x="44" y="247" font-size="12.5" fill="#566072"># stack: Python · Bash · PowerShell · Linux · Splunk · ELK · YARA · Sigma · MITRE ATT&amp;CK</text>
+
+    <!-- status + live cursor prompt -->
+    <text x="44" y="270" font-size="13.5">
+      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#7d8590">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#7d8590">$ </tspan><tspan fill="#e6edf3">status</tspan><tspan fill="#7d8590"> --</tspan><tspan fill="#ff5cf2">open-to-collaborate</tspan>
+    </text>
+    <rect x="404" y="260" width="9" height="14" fill="#22d3ee" class="ncd-cursor"/>
+  </g>
+
+  <!-- status pill top-right -->
+  <g class="mono">
+    <rect x="708" y="72" width="150" height="26" rx="13" fill="#0e1622" stroke="#22d3ee" stroke-width="1" opacity="0.95"/>
+    <circle cx="726" cy="85" r="4" fill="#27c93f"><animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <text x="738" y="89" font-size="11.5" fill="#9aa6b8">online · listening</text>
+  </g>
+</svg>

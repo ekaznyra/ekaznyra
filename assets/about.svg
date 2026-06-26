@@ -1,0 +1,95 @@
+<svg viewBox="0 0 900 232" width="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="winGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d111a"/>
+      <stop offset="1" stop-color="#090c12"/>
+    </linearGradient>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="0.5" stop-color="#7fe9f4"/>
+      <stop offset="1" stop-color="#ff5cf2"/>
+    </linearGradient>
+    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="1" fill="#ffffff" opacity="0.02"/>
+    </pattern>
+    <clipPath id="winClip">
+      <rect x="18" y="14" width="864" height="204" rx="12"/>
+    </clipPath>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+  </defs>
+
+  <!-- backdrop -->
+  <rect x="0" y="0" width="900" height="232" fill="#0d1117"/>
+
+  <!-- window pane -->
+  <rect x="18" y="14" width="864" height="204" rx="12" fill="url(#winGrad)" stroke="#222b3d" stroke-width="1.2"/>
+
+  <!-- ambient glows + scanlines clipped to window -->
+  <g clip-path="url(#winClip)">
+    <circle cx="80" cy="60" r="120" fill="#22d3ee" opacity="0.05" filter="url(#blur)"/>
+    <circle cx="840" cy="210" r="130" fill="#ff5cf2" opacity="0.05" filter="url(#blur)"/>
+    <rect x="18" y="14" width="864" height="204" fill="url(#scan)"/>
+  </g>
+
+  <!-- neon edge -->
+  <rect x="18" y="14" width="864" height="204" rx="12" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.16"/>
+
+  <!-- title bar -->
+  <g font-family="'Courier New',Consolas,ui-monospace,monospace">
+    <circle cx="44" cy="34" r="6" fill="#ff5f56"/>
+    <circle cx="64" cy="34" r="6" fill="#ffbd2e"/>
+    <circle cx="84" cy="34" r="6" fill="#27c93f"/>
+    <text x="450" y="38" text-anchor="middle" font-size="12.5" fill="#9aa6b8">about — ekaznyra@sec</text>
+    <text x="866" y="38" text-anchor="end" font-size="12.5" fill="#22d3ee" opacity="0.75">~/about</text>
+    <line x1="18" y1="50" x2="882" y2="50" stroke="#283246" stroke-width="1"/>
+  </g>
+
+  <!-- content -->
+  <g font-family="'Courier New',Consolas,ui-monospace,monospace" font-size="13">
+
+    <!-- prompt line -->
+    <text x="40" y="74">
+      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#7d8590">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#7d8590">$ </tspan><tspan fill="#e6edf3">cat about.md</tspan>
+    </text>
+
+    <!-- vertical divider -->
+    <line x1="450" y1="92" x2="450" y2="196" stroke="#283246" stroke-width="1"/>
+
+    <!-- LEFT column : identity -->
+    <text x="40" y="104" fill="#566072"># identity</text>
+
+    <text x="40" y="126">
+      <tspan fill="#22d3ee">name</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">Nguyễn Ngọc Anh Tú</tspan>
+    </text>
+    <text x="40" y="146">
+      <tspan fill="#22d3ee">alias</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#ff5cf2">ekaznyra</tspan>
+    </text>
+    <text x="40" y="166">
+      <tspan fill="#22d3ee">role</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">Cybersecurity Researcher</tspan>
+    </text>
+    <text x="40" y="186">
+      <tspan fill="#22d3ee">location</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">Vietnam</tspan>
+    </text>
+    <text x="40" y="206">
+      <tspan fill="#22d3ee">site</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">nguyenngocanhtu.software</tspan>
+    </text>
+
+    <!-- RIGHT column : research_focus -->
+    <text x="478" y="104" fill="#566072"># research_focus</text>
+
+    <text x="478" y="126"><tspan fill="#22d3ee">▸ </tspan><tspan fill="#9aa6b8">Digital Forensics &amp; Incident Response</tspan></text>
+    <text x="478" y="146"><tspan fill="#ff5cf2">◆ </tspan><tspan fill="#9aa6b8">Detection Engineering — Sigma / YARA</tspan></text>
+    <text x="478" y="166"><tspan fill="#22d3ee">▸ </tspan><tspan fill="#9aa6b8">Threat Hunting — MITRE ATT&amp;CK</tspan></text>
+    <text x="478" y="186"><tspan fill="#ff5cf2">◆ </tspan><tspan fill="#9aa6b8">Malware Behavior Analysis</tspan></text>
+  </g>
+
+  <!-- footer comment (clean, full width) -->
+  <text x="478" y="206" font-family="'Courier New',Consolas,ui-monospace,monospace" font-size="12.5" font-style="italic" fill="#566072"># "I study how systems are used — and misused."</text>
+
+  <!-- blinking cursor at prompt (after the typed command) -->
+  <rect x="262" y="64" width="8" height="13" fill="#22d3ee">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
