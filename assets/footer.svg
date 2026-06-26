@@ -1,51 +1,89 @@
-<svg viewBox="0 0 900 120" width="900" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 130" width="900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Security console footer: Understand, Detect, Defend">
   <defs>
-    <linearGradient id="ftWin" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="ftPanel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0d111a"/>
       <stop offset="1" stop-color="#090c12"/>
     </linearGradient>
-    <linearGradient id="ftHero" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="ftSlogan" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="0.5" stop-color="#7fe9f4"/>
+      <stop offset="0.55" stop-color="#7ab8f0"/>
       <stop offset="1" stop-color="#ff5cf2"/>
     </linearGradient>
+    <radialGradient id="ftGlowC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ftGlowM" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff5cf2" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ff5cf2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ftNeon" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="ftSoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2"/>
+    </filter>
     <pattern id="ftScan" width="3" height="3" patternUnits="userSpaceOnUse">
       <rect width="3" height="1" fill="#ffffff" opacity="0.02"/>
     </pattern>
-    <clipPath id="ftClip">
-      <rect x="18" y="14" width="864" height="92" rx="12"/>
-    </clipPath>
-    <filter id="ftBlur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="34"/>
-    </filter>
+    <clipPath id="ftClip"><rect x="6" y="6" width="888" height="118" rx="12"/></clipPath>
   </defs>
 
-  <rect x="0" y="0" width="900" height="120" fill="#0d1117"/>
-
-  <rect x="18" y="14" width="864" height="92" rx="12" fill="url(#ftWin)" stroke="#222b3d" stroke-width="1.2"/>
+  <rect x="6" y="6" width="888" height="118" rx="12" fill="url(#ftPanel)" stroke="#222b3d" stroke-width="1.2"/>
+  <rect x="7.5" y="7.5" width="885" height="115" rx="11" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.16"/>
 
   <g clip-path="url(#ftClip)">
-    <circle cx="120" cy="40" r="80" fill="#22d3ee" opacity="0.05" filter="url(#ftBlur)"/>
-    <circle cx="800" cy="96" r="80" fill="#ff5cf2" opacity="0.05" filter="url(#ftBlur)"/>
-    <rect x="18" y="14" width="864" height="92" fill="url(#ftScan)"/>
+    <ellipse cx="150" cy="120" rx="220" ry="120" fill="url(#ftGlowC)" filter="url(#ftSoft)" opacity="0.5"/>
+    <ellipse cx="780" cy="10" rx="220" ry="120" fill="url(#ftGlowM)" filter="url(#ftSoft)" opacity="0.5"/>
+    <rect x="6" y="6" width="888" height="118" fill="url(#ftScan)"/>
+
+    <g opacity="0.07" fill="none" stroke="#22d3ee" stroke-width="1">
+      <line x1="30" y1="116" x2="30" y2="110"/><line x1="48" y1="116" x2="48" y2="112"/>
+      <line x1="66" y1="116" x2="66" y2="112"/><line x1="84" y1="116" x2="84" y2="112"/>
+      <line x1="102" y1="116" x2="102" y2="110"/><line x1="120" y1="116" x2="120" y2="112"/>
+      <line x1="138" y1="116" x2="138" y2="112"/>
+    </g>
+    <text x="640" y="119" font-family="'Courier New',Consolas,ui-monospace,monospace" font-size="8" letter-spacing="2" fill="#22d3ee" opacity="0.10">01000100 01000101 01000110</text>
   </g>
 
-  <rect x="18" y="14" width="864" height="92" rx="12" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.16"/>
+  <g stroke="#22d3ee" stroke-width="1.4" fill="none" stroke-linecap="round">
+    <path d="M18 32 V18 H32" opacity="0.7"/>
+    <path d="M882 32 V18 H868" opacity="0.7"/>
+    <path d="M18 98 V112 H32" opacity="0.7"/>
+    <path d="M882 98 V112 H868" opacity="0.7"/>
+  </g>
 
   <g font-family="'Courier New',Consolas,ui-monospace,monospace">
-    <text x="42" y="44" font-size="13">
-      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#7d8590">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#7d8590">$ </tspan><tspan fill="#e6edf3">./defend.sh --run</tspan>
+    <text x="40" y="34" font-size="12" letter-spacing="0.5">
+      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#566072">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#566072">$ </tspan><tspan fill="#e6edf3">./defend.sh </tspan><tspan fill="#ffbd2e">--run</tspan>
     </text>
 
-    <text x="42" y="76" font-size="22" font-weight="bold" letter-spacing="2" fill="url(#ftHero)">Understand · Detect · Defend</text>
+    <line x1="40" y1="44" x2="860" y2="44" stroke="#1b2230" stroke-width="1"/>
 
-    <text x="42" y="95" font-size="12" fill="#566072"># thanks for stopping by — let's build better detections</text>
+    <text x="40" y="76" font-size="22" letter-spacing="2.5" font-weight="bold" fill="url(#ftSlogan)" filter="url(#ftNeon)">Understand · Detect · Defend</text>
 
-    <text x="700" y="95" font-size="13" text-anchor="start">
-      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#7d8590">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#7d8590">$ </tspan>
+    <text x="40" y="98" font-size="11" letter-spacing="0.4" fill="#566072"># thanks for stopping by — let's build better detections</text>
+
+    <text x="40" y="118" font-size="12" letter-spacing="0.5">
+      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#566072">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#566072">$ </tspan>
     </text>
-    <rect x="827" y="86" width="9" height="13" fill="#22d3ee">
-      <animate attributeName="opacity" values="1;1;0;0" dur="1.06s" repeatCount="indefinite"/>
+    <rect x="150" y="109" width="9" height="12" fill="#22d3ee">
+      <animate attributeName="opacity" values="1;1;0;0" dur="1.05s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g>
+    <circle cx="838" cy="30" r="3.5" fill="#27c93f" filter="url(#ftNeon)">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="848" y="34" font-family="'Courier New',Consolas,ui-monospace,monospace" font-size="10" letter-spacing="1.5" fill="#7d8590">ONLINE</text>
+  </g>
+
+  <g clip-path="url(#ftClip)">
+    <rect x="6" y="6" width="60" height="118" fill="url(#ftGlowC)" filter="url(#ftSoft)" opacity="0.12">
+      <animate attributeName="x" values="-60;900" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.12;0.3;0.12" dur="6.5s" repeatCount="indefinite"/>
     </rect>
   </g>
 </svg>
