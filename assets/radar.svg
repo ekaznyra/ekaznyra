@@ -1,0 +1,154 @@
+<svg viewBox="0 0 900 190" width="900" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New',Consolas,ui-monospace,monospace">
+  <defs>
+    <linearGradient id="m4panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d111a"/>
+      <stop offset="1" stop-color="#090c12"/>
+    </linearGradient>
+    <linearGradient id="m4accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#ff5cf2"/>
+    </linearGradient>
+    <radialGradient id="m4scope" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#0e2230"/>
+      <stop offset="0.7" stop-color="#0a141d"/>
+      <stop offset="1" stop-color="#080c12"/>
+    </radialGradient>
+    <radialGradient id="m4sweep" cx="0%" cy="0%" r="100%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#22d3ee" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="m4glowC" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="m4glowM" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff5cf2" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ff5cf2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="m4soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="m4blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <pattern id="m4scan" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="1" fill="#ffffff" opacity="0.02"/>
+    </pattern>
+    <clipPath id="m4clip"><rect x="1" y="1" width="898" height="188" rx="12"/></clipPath>
+    <clipPath id="m4scopeClip"><circle cx="148" cy="98" r="72"/></clipPath>
+  </defs>
+
+  <!-- panel -->
+  <rect x="1" y="1" width="898" height="188" rx="12" fill="url(#m4panel)" stroke="#222b3d" stroke-width="1.2"/>
+  <g clip-path="url(#m4clip)">
+    <ellipse cx="150" cy="120" rx="200" ry="150" fill="url(#m4glowC)" filter="url(#m4blur)" opacity="0.5"/>
+    <ellipse cx="760" cy="40" rx="220" ry="150" fill="url(#m4glowM)" filter="url(#m4blur)" opacity="0.45"/>
+    <rect x="1" y="1" width="898" height="188" fill="url(#m4scan)"/>
+    <!-- edge telemetry ticks -->
+    <g stroke="#22d3ee" stroke-width="1" opacity="0.10">
+      <line x1="20" y1="176" x2="880" y2="176"/>
+    </g>
+    <g fill="#22d3ee" opacity="0.10" font-size="7" letter-spacing="2">
+      <text x="20" y="184">01001110 11000101 01000111 01010101 11011001 00101110 01010100 11000011 10111010</text>
+    </g>
+  </g>
+
+  <!-- inner neon edge -->
+  <rect x="3.5" y="3.5" width="893" height="183" rx="10.5" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.16"/>
+
+  <!-- corner reticles -->
+  <g stroke="#22d3ee" stroke-width="1.4" fill="none" opacity="0.7">
+    <path d="M14 30 L14 16 L28 16"/>
+    <path d="M886 30 L886 16 L872 16"/>
+    <path d="M14 160 L14 174 L28 174"/>
+    <path d="M886 160 L886 174 L872 174"/>
+  </g>
+
+  <!-- header -->
+  <g>
+    <circle cx="30" cy="32" r="4" fill="#27c93f">
+      <animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="44" y="36" fill="#22d3ee" font-size="12" letter-spacing="3" font-weight="bold">MOD-04 // TELEMETRY</text>
+    <text x="886" y="36" text-anchor="end" fill="#566072" font-size="10" letter-spacing="2">/var/soc/sensors ● REC</text>
+    <line x1="14" y1="48" x2="886" y2="48" stroke="#1b2230" stroke-width="1"/>
+  </g>
+
+  <!-- ===== RADAR SCOPE (left) ===== -->
+  <g transform="translate(10,26) scale(0.84)">
+    <circle cx="148" cy="98" r="72" fill="url(#m4scope)" stroke="#283246" stroke-width="1.2"/>
+    <g clip-path="url(#m4scopeClip)">
+      <!-- range rings -->
+      <g fill="none" stroke="#22d3ee" stroke-width="1">
+        <circle cx="148" cy="98" r="18" opacity="0.28"/>
+        <circle cx="148" cy="98" r="36" opacity="0.22"/>
+        <circle cx="148" cy="98" r="54" opacity="0.18"/>
+        <circle cx="148" cy="98" r="72" opacity="0.14"/>
+      </g>
+      <!-- crosshair -->
+      <g stroke="#22d3ee" stroke-width="0.8" opacity="0.18">
+        <line x1="76" y1="98" x2="220" y2="98"/>
+        <line x1="148" y1="26" x2="148" y2="170"/>
+        <line x1="97" y1="47" x2="199" y2="149"/>
+        <line x1="199" y1="47" x2="97" y2="149"/>
+      </g>
+      <!-- sweep beam -->
+      <g>
+        <path d="M148 98 L148 26 A72 72 0 0 1 217 78 Z" fill="url(#m4sweep)"/>
+        <line x1="148" y1="98" x2="148" y2="26" stroke="#22d3ee" stroke-width="1.4" opacity="0.9"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 148 98" to="360 148 98" dur="4s" repeatCount="indefinite"/>
+      </g>
+      <!-- blips -->
+      <g fill="#27c93f">
+        <circle cx="172" cy="74" r="2.6"><animate attributeName="opacity" values="1;0.3;1" dur="4s" repeatCount="indefinite"/></circle>
+        <circle cx="118" cy="120" r="2.2" fill="#ffbd2e"><animate attributeName="opacity" values="0.4;1;0.4" dur="4s" begin="1.2s" repeatCount="indefinite"/></circle>
+        <circle cx="186" cy="118" r="2.2" fill="#22d3ee"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="2.4s" repeatCount="indefinite"/></circle>
+        <circle cx="124" cy="78" r="1.8" fill="#ff5cf2"><animate attributeName="opacity" values="0.5;1;0.5" dur="4s" begin="3.1s" repeatCount="indefinite"/></circle>
+      </g>
+    </g>
+    <circle cx="148" cy="98" r="2.4" fill="#22d3ee" filter="url(#m4soft)"/>
+    <text x="148" y="182" text-anchor="middle" fill="#7d8590" font-size="8" letter-spacing="2">SCOPE · 360° SWEEP</text>
+  </g>
+
+  <!-- ===== TELEMETRY READOUT (right) ===== -->
+  <g filter="url(#m4soft)">
+    <text x="270" y="74" font-size="18" letter-spacing="4" font-weight="bold" fill="url(#m4accent)">SIGNAL · DETECT · HUNT</text>
+  </g>
+
+  <g font-size="12.5" letter-spacing="1">
+    <text x="270" y="100" fill="#9aa6b8">repos</text>
+    <text x="330" y="100" fill="#566072" letter-spacing="2">.......................</text>
+    <text x="566" y="100" fill="#e6edf3" font-weight="bold">07</text>
+
+    <text x="270" y="120" fill="#9aa6b8">stars</text>
+    <text x="330" y="120" fill="#566072" letter-spacing="2">.......................</text>
+    <text x="566" y="120" fill="#ffbd2e" font-weight="bold">72</text>
+
+    <text x="270" y="140" fill="#9aa6b8">followers</text>
+    <text x="375" y="140" fill="#566072" letter-spacing="2">...................</text>
+    <text x="566" y="140" fill="#e6edf3" font-weight="bold">20</text>
+
+    <text x="270" y="160" fill="#9aa6b8">focus</text>
+    <text x="330" y="160" fill="#566072" letter-spacing="2">..............</text>
+    <text x="480" y="160" fill="#22d3ee" font-weight="bold">detection · DFIR</text>
+  </g>
+
+  <!-- sensors online badge -->
+  <g>
+    <rect x="616" y="86" width="180" height="22" rx="6" fill="#0e1620" stroke="#27c93f" stroke-width="1" opacity="0.9"/>
+    <circle cx="630" cy="97" r="3.4" fill="#27c93f">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="642" y="101" fill="#27c93f" font-size="10.5" letter-spacing="2" font-weight="bold">SENSORS ONLINE</text>
+  </g>
+
+  <!-- right-edge signal bars -->
+  <g fill="#22d3ee">
+    <rect x="816" y="146" width="4" height="6" opacity="0.4"/>
+    <rect x="824" y="142" width="4" height="10" opacity="0.6"/>
+    <rect x="832" y="136" width="4" height="16" opacity="0.8"/>
+    <rect x="840" y="130" width="4" height="22" opacity="1"/>
+  </g>
+</svg>

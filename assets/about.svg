@@ -1,95 +1,118 @@
-<svg viewBox="0 0 900 232" width="900" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 240" width="900" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New',Consolas,ui-monospace,monospace">
   <defs>
-    <linearGradient id="winGrad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="m01-panel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0d111a"/>
       <stop offset="1" stop-color="#090c12"/>
     </linearGradient>
-    <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="m01-name" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="0.5" stop-color="#7fe9f4"/>
       <stop offset="1" stop-color="#ff5cf2"/>
     </linearGradient>
-    <pattern id="scan" width="3" height="3" patternUnits="userSpaceOnUse">
+    <radialGradient id="m01-glowC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="m01-glowM" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff5cf2" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ff5cf2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="m01-soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="m01-scan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="m01-scanlines" width="3" height="3" patternUnits="userSpaceOnUse">
       <rect width="3" height="1" fill="#ffffff" opacity="0.02"/>
     </pattern>
-    <clipPath id="winClip">
-      <rect x="18" y="14" width="864" height="204" rx="12"/>
-    </clipPath>
-    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="34"/>
-    </filter>
+    <clipPath id="m01-clip"><rect x="8" y="8" width="884" height="224" rx="12"/></clipPath>
+    <style>
+      @keyframes m01led{0%,100%{opacity:1}50%{opacity:.35}}
+      @keyframes m01beam{0%{transform:translateY(0)}100%{transform:translateY(180px)}}
+      @keyframes m01caret{0%,49%{opacity:1}50%,100%{opacity:0}}
+      @keyframes m01ret{0%,100%{opacity:.75}50%{opacity:.4}}
+      @keyframes m01glitch{0%,92%,100%{transform:translate(0,0)}93%{transform:translate(-1.4px,0)}96%{transform:translate(1.4px,0)}}
+      .m01-led{animation:m01led 1.8s ease-in-out infinite}
+      .m01-beam{animation:m01beam 5.5s linear infinite}
+      .m01-caret{animation:m01caret 1.1s step-end infinite}
+      .m01-ret{animation:m01ret 3.4s ease-in-out infinite}
+      .m01-glitch{animation:m01glitch 6s ease-in-out infinite}
+      @media (prefers-reduced-motion:reduce){
+        .m01-led,.m01-beam,.m01-caret,.m01-ret,.m01-glitch{animation:none}
+      }
+    </style>
   </defs>
 
-  <!-- backdrop -->
-  <rect x="0" y="0" width="900" height="232" fill="#0d1117"/>
+  <rect x="0" y="0" width="900" height="240" fill="#0d1117"/>
+  <rect x="8" y="8" width="884" height="224" rx="12" fill="url(#m01-panel)" stroke="#222b3d" stroke-width="1.2"/>
+  <rect x="9.5" y="9.5" width="881" height="221" rx="11" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.16"/>
 
-  <!-- window pane -->
-  <rect x="18" y="14" width="864" height="204" rx="12" fill="url(#winGrad)" stroke="#222b3d" stroke-width="1.2"/>
-
-  <!-- ambient glows + scanlines clipped to window -->
-  <g clip-path="url(#winClip)">
-    <circle cx="80" cy="60" r="120" fill="#22d3ee" opacity="0.05" filter="url(#blur)"/>
-    <circle cx="840" cy="210" r="130" fill="#ff5cf2" opacity="0.05" filter="url(#blur)"/>
-    <rect x="18" y="14" width="864" height="204" fill="url(#scan)"/>
+  <g clip-path="url(#m01-clip)">
+    <ellipse cx="170" cy="60" rx="260" ry="150" fill="url(#m01-glowC)" opacity="0.10"/>
+    <ellipse cx="760" cy="200" rx="280" ry="160" fill="url(#m01-glowM)" opacity="0.09"/>
+    <rect x="8" y="8" width="884" height="224" fill="url(#m01-scanlines)"/>
+    <g class="m01-beam"><rect x="8" y="-10" width="884" height="22" fill="url(#m01-scan)" opacity="0.45"/></g>
+    <g opacity="0.07" fill="#22d3ee" font-size="7" letter-spacing="1">
+      <text x="20" y="222">01001110 01000111 01001111 01000011 0100 // FORENSIC.NODE // ATT&amp;CK.READY // SIGMA::YARA</text>
+    </g>
+    <g stroke="#283246" stroke-width="1" opacity="0.5">
+      <line x1="20" y1="46" x2="20" y2="52"/><line x1="40" y1="46" x2="40" y2="50"/>
+      <line x1="60" y1="46" x2="60" y2="50"/><line x1="80" y1="46" x2="80" y2="52"/>
+      <line x1="100" y1="46" x2="100" y2="50"/><line x1="120" y1="46" x2="120" y2="50"/>
+    </g>
   </g>
 
-  <!-- neon edge -->
-  <rect x="18" y="14" width="864" height="204" rx="12" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.16"/>
-
-  <!-- title bar -->
-  <g font-family="'Courier New',Consolas,ui-monospace,monospace">
-    <circle cx="44" cy="34" r="6" fill="#ff5f56"/>
-    <circle cx="64" cy="34" r="6" fill="#ffbd2e"/>
-    <circle cx="84" cy="34" r="6" fill="#27c93f"/>
-    <text x="450" y="38" text-anchor="middle" font-size="12.5" fill="#9aa6b8">about — ekaznyra@sec</text>
-    <text x="866" y="38" text-anchor="end" font-size="12.5" fill="#22d3ee" opacity="0.75">~/about</text>
-    <line x1="18" y1="50" x2="882" y2="50" stroke="#283246" stroke-width="1"/>
+  <g class="m01-ret" stroke="#22d3ee" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M22 38 V24 H36"/>
+    <path d="M878 38 V24 H864"/>
+    <path d="M22 202 V216 H36"/>
+    <path d="M878 202 V216 H864"/>
   </g>
 
-  <!-- content -->
-  <g font-family="'Courier New',Consolas,ui-monospace,monospace" font-size="13">
+  <g>
+    <text x="34" y="42" fill="#22d3ee" font-size="11" letter-spacing="2.5" font-weight="bold" filter="url(#m01-soft)">MOD-01 // IDENTITY</text>
+    <circle class="m01-led" cx="214" cy="38" r="3.4" fill="#27c93f" filter="url(#m01-soft)"/>
+    <text x="226" y="42" fill="#27c93f" font-size="9" letter-spacing="1.5">ONLINE</text>
+    <g opacity="0.85">
+      <rect x="806" y="34" width="2.4" height="4" fill="#22d3ee"/>
+      <rect x="811" y="31" width="2.4" height="7" fill="#22d3ee"/>
+      <rect x="816" y="28" width="2.4" height="10" fill="#22d3ee"/>
+      <rect x="821" y="25" width="2.4" height="13" fill="#22d3ee" opacity="0.4"/>
+    </g>
+    <text x="838" y="42" fill="#7d8590" font-size="10" letter-spacing="1" text-anchor="start">~/about</text>
+  </g>
+  <line x1="22" y1="52" x2="878" y2="52" stroke="#283246" stroke-width="1"/>
 
-    <!-- prompt line -->
-    <text x="40" y="74">
-      <tspan fill="#27c93f">ekaznyra@sec</tspan><tspan fill="#7d8590">:</tspan><tspan fill="#22d3ee">~</tspan><tspan fill="#7d8590">$ </tspan><tspan fill="#e6edf3">cat about.md</tspan>
-    </text>
-
-    <!-- vertical divider -->
-    <line x1="450" y1="92" x2="450" y2="196" stroke="#283246" stroke-width="1"/>
-
-    <!-- LEFT column : identity -->
-    <text x="40" y="104" fill="#566072"># identity</text>
-
-    <text x="40" y="126">
-      <tspan fill="#22d3ee">name</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">Nguyễn Ngọc Anh Tú</tspan>
-    </text>
-    <text x="40" y="146">
-      <tspan fill="#22d3ee">alias</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#ff5cf2">ekaznyra</tspan>
-    </text>
-    <text x="40" y="166">
-      <tspan fill="#22d3ee">role</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">Cybersecurity Researcher</tspan>
-    </text>
-    <text x="40" y="186">
-      <tspan fill="#22d3ee">location</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">Vietnam</tspan>
-    </text>
-    <text x="40" y="206">
-      <tspan fill="#22d3ee">site</tspan><tspan fill="#7d8590"> = </tspan><tspan fill="#e6edf3">nguyenngocanhtu.software</tspan>
-    </text>
-
-    <!-- RIGHT column : research_focus -->
-    <text x="478" y="104" fill="#566072"># research_focus</text>
-
-    <text x="478" y="126"><tspan fill="#22d3ee">▸ </tspan><tspan fill="#9aa6b8">Digital Forensics &amp; Incident Response</tspan></text>
-    <text x="478" y="146"><tspan fill="#ff5cf2">◆ </tspan><tspan fill="#9aa6b8">Detection Engineering — Sigma / YARA</tspan></text>
-    <text x="478" y="166"><tspan fill="#22d3ee">▸ </tspan><tspan fill="#9aa6b8">Threat Hunting — MITRE ATT&amp;CK</tspan></text>
-    <text x="478" y="186"><tspan fill="#ff5cf2">◆ </tspan><tspan fill="#9aa6b8">Malware Behavior Analysis</tspan></text>
+  <g font-size="11">
+    <text x="34" y="74" fill="#27c93f">ekaznyra@sec</text><text x="123" y="74" fill="#9aa6b8">:</text><text x="129" y="74" fill="#22d3ee">~$</text><text x="148" y="74" fill="#e6edf3">cat about.md</text>
+    <rect class="m01-caret" x="237" y="65" width="6" height="11" fill="#22d3ee"/>
   </g>
 
-  <!-- footer comment (clean, full width) -->
-  <text x="478" y="206" font-family="'Courier New',Consolas,ui-monospace,monospace" font-size="12.5" font-style="italic" fill="#566072"># "I study how systems are used — and misused."</text>
+  <line x1="450" y1="92" x2="450" y2="196" stroke="#1b2230" stroke-width="1"/>
 
-  <!-- blinking cursor at prompt (after the typed command) -->
-  <rect x="262" y="64" width="8" height="13" fill="#22d3ee">
-    <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
-  </rect>
+  <g>
+    <text x="34" y="102" fill="#566072" font-size="10" letter-spacing="1.5"># identity</text>
+    <g font-size="11.5">
+      <text x="34" y="124" fill="#22d3ee">name</text><text x="120" y="124" fill="#566072">=</text><text x="134" y="124" fill="#e6edf3" filter="url(#m01-soft)" class="m01-glitch">Nguyễn Ngọc Anh Tú</text>
+      <text x="34" y="145" fill="#22d3ee">alias</text><text x="120" y="145" fill="#566072">=</text><text x="134" y="145" fill="#ff5cf2" filter="url(#m01-soft)">ekaznyra</text>
+      <text x="34" y="166" fill="#22d3ee">role</text><text x="120" y="166" fill="#566072">=</text><text x="134" y="166" fill="#e6edf3">Cybersecurity Researcher</text>
+      <text x="34" y="187" fill="#22d3ee">location</text><text x="120" y="187" fill="#566072">=</text><text x="134" y="187" fill="#e6edf3">Vietnam</text>
+      <text x="34" y="208" fill="#22d3ee">site</text><text x="120" y="208" fill="#566072">=</text><text x="134" y="208" fill="#9aa6b8">nguyenngocanhtu.software</text>
+    </g>
+  </g>
+
+  <g>
+    <text x="470" y="102" fill="#566072" font-size="10" letter-spacing="1.5"># research_focus</text>
+    <g font-size="11">
+      <text x="470" y="124" fill="#22d3ee">▸</text><text x="486" y="124" fill="#9aa6b8">Digital Forensics &amp; Incident Response</text>
+      <text x="470" y="145" fill="#ff5cf2">▸</text><text x="486" y="145" fill="#9aa6b8">Detection Engineering — Sigma / YARA</text>
+      <text x="470" y="166" fill="#22d3ee">▸</text><text x="486" y="166" fill="#9aa6b8">Threat Hunting — MITRE ATT&amp;CK</text>
+      <text x="470" y="187" fill="#ff5cf2">▸</text><text x="486" y="187" fill="#9aa6b8">Malware Behavior Analysis</text>
+    </g>
+  </g>
+
+  <text x="34" y="225" fill="#566072" font-size="10" font-style="italic" opacity="0.85"># "I study how systems are used — and misused."</text>
 </svg>

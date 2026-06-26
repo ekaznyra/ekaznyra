@@ -27,6 +27,14 @@
 
 <br/>
 
+<!-- ─── TELEMETRY / DETECTION RADAR ────────────────────────────── -->
+
+<div align="center">
+  <img src="assets/radar.svg" width="100%" alt="Telemetry · Detection Radar"/>
+</div>
+
+<br/>
+
 <!-- ─── STATS ──────────────────────────────────────────────────── -->
 
 <div align="center">
