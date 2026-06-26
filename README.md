@@ -48,6 +48,20 @@
 
 <br/>
 
+<!-- ─── CONTRIBUTION SNAKE ─────────────────────────────────────── -->
+
+<div align="center">
+  <code>ekaznyra@sec:~$ ./snake.sh --eat-contributions</code>
+</div>
+
+<br/>
+
+<div align="center">
+  <img width="96%" src="assets/snake.svg" alt="Contribution Snake"/>
+</div>
+
+<br/>
+
 <!-- ─── CONNECT ────────────────────────────────────────────────── -->
 
 <div align="center">
