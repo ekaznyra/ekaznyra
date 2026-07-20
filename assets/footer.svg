@@ -28,6 +28,16 @@
       <rect width="3" height="1" fill="#ffffff" opacity="0.02"/>
     </pattern>
     <clipPath id="ftClip"><rect x="6" y="6" width="888" height="118" rx="12"/></clipPath>
+    <style>
+      @keyframes ftPing{0%{transform:scale(1);opacity:.5}70%,100%{transform:scale(2.9);opacity:0}}
+      @keyframes ftBreathe{0%,100%{opacity:.7}50%{opacity:.4}}
+      .ftPing{animation:ftPing 2.6s ease-out infinite;transform-box:fill-box;transform-origin:center}
+      .ftBreathe{animation:ftBreathe 4s ease-in-out infinite}
+      @media (prefers-reduced-motion:reduce){
+        .ftPing,.ftBreathe{animation:none}
+        animate{display:none}
+      }
+    </style>
   </defs>
 
   <rect x="6" y="6" width="888" height="118" rx="12" fill="url(#ftPanel)" stroke="#222b3d" stroke-width="1.2"/>
@@ -47,11 +57,11 @@
     <text x="640" y="119" font-family="'Courier New',Consolas,ui-monospace,monospace" font-size="8" letter-spacing="2" fill="#22d3ee" opacity="0.10">01000100 01000101 01000110</text>
   </g>
 
-  <g stroke="#22d3ee" stroke-width="1.4" fill="none" stroke-linecap="round">
-    <path d="M18 32 V18 H32" opacity="0.7"/>
-    <path d="M882 32 V18 H868" opacity="0.7"/>
-    <path d="M18 98 V112 H32" opacity="0.7"/>
-    <path d="M882 98 V112 H868" opacity="0.7"/>
+  <g class="ftBreathe" stroke="#22d3ee" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M18 32 V18 H32"/>
+    <path d="M882 32 V18 H868"/>
+    <path d="M18 98 V112 H32"/>
+    <path d="M882 98 V112 H868"/>
   </g>
 
   <g font-family="'Courier New',Consolas,ui-monospace,monospace">
@@ -74,6 +84,7 @@
   </g>
 
   <g>
+    <circle class="ftPing" cx="838" cy="30" r="3.5" fill="none" stroke="#27c93f" stroke-width="1.2"/>
     <circle cx="838" cy="30" r="3.5" fill="#27c93f" filter="url(#ftNeon)">
       <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
     </circle>
