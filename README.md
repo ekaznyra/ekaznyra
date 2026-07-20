@@ -3,6 +3,14 @@
 <!-- Theme: NEON CYBERDECK · terminal aesthetic                       -->
 <!-- ════════════════════════════════════════════════════════════════ -->
 
+<!-- ─── BOOT SEQUENCE ──────────────────────────────────────────── -->
+
+<div align="center">
+  <img src="assets/boot.svg" width="100%" alt="Secure boot — decrypting operator profile · access granted"/>
+</div>
+
+<br/>
+
 <div align="center">
   <img src="assets/header.svg" width="100%" alt="ekaznyra — Nguyễn Ngọc Anh Tú — Cybersecurity Researcher"/>
 </div>
@@ -39,6 +47,14 @@
 
 <div align="center">
   <img src="assets/stats.svg" width="100%" alt="MOD-05 · Git Log — stars 75 · repos 6 · followers 22 · top languages: JavaScript, Python, PowerShell"/>
+</div>
+
+<br/>
+
+<!-- ─── KILL-CHAIN / DETECTION MAP ─────────────────────────────── -->
+
+<div align="center">
+  <img src="assets/killchain.svg" width="100%" alt="MOD-06 · Kill-Chain — adversary lifecycle mapped to detections; chain broken at C2"/>
 </div>
 
 <br/>
