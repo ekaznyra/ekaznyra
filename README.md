@@ -38,14 +38,7 @@
 <!-- ─── STATS ──────────────────────────────────────────────────── -->
 
 <div align="center">
-  <code>ekaznyra@sec:~$ git log --stat --graph</code>
-</div>
-
-<br/>
-
-<div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=ekaznyra&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&rank_icon=percentile&title_color=22d3ee&icon_color=ff5cf2&text_color=9aa6b8&bg_color=0d1117" alt="GitHub Stats"/>
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ekaznyra&layout=compact&hide_border=true&title_color=22d3ee&text_color=9aa6b8&bg_color=0d1117" alt="Top Languages"/>
+  <img src="assets/stats.svg" width="100%" alt="MOD-05 · Git Log — stars 75 · repos 6 · followers 22 · top languages: JavaScript, Python, PowerShell"/>
 </div>
 
 <br/>
