@@ -8,6 +8,14 @@ on:
   push:
     branches:
       - main
+    # The commit made by this workflow only updates the generated snake.
+    # Ignore it so the update cannot trigger another identical run.
+    paths-ignore:
+      - assets/snake.svg
+
+concurrency:
+  group: contribution-snake
+  cancel-in-progress: false
 
 jobs:
   generate:

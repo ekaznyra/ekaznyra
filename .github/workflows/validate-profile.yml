@@ -1,0 +1,53 @@
+name: Validate Profile Assets
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate SVGs and README asset references
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+
+          root = Path.cwd()
+          assets = sorted((root / "assets").glob("*.svg"))
+          if not assets:
+              raise SystemExit("No SVG assets found")
+
+          for asset in assets:
+              try:
+                  document = ET.parse(asset)
+              except ET.ParseError as error:
+                  raise SystemExit(f"Invalid SVG: {asset}: {error}") from error
+              svg = document.getroot()
+              if svg.tag != "{http://www.w3.org/2000/svg}svg":
+                  raise SystemExit(f"Not an SVG document: {asset}")
+              if not svg.get("viewBox"):
+                  raise SystemExit(f"Missing viewBox: {asset}")
+
+          readme = (root / "README.md").read_text(encoding="utf-8")
+          references = re.findall(r'<img[^>]+src="([^"]+)"', readme)
+          local = [reference for reference in references if not reference.startswith(("http://", "https://"))]
+          missing = [reference for reference in local if not (root / reference).is_file()]
+          if missing:
+              raise SystemExit("Missing README assets: " + ", ".join(missing))
+
+          print(f"Validated {len(assets)} SVGs and {len(local)} local README assets")

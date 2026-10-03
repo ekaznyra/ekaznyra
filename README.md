@@ -44,7 +44,9 @@
 <br/>
 
 <div align="center">
-  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=ekaznyra&bg_color=0d1117&color=22d3ee&line=22d3ee&point=ff5cf2&area=true&hide_border=true" alt="Contribution Activity"/>
+  <a href="https://github.com/ekaznyra">
+    <code>ekaznyra@sec:~$ open contribution-activity ↗</code>
+  </a>
 </div>
 
 <br/>
