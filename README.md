@@ -43,13 +43,7 @@
 
 <br/>
 
-<div align="center">
-  <code>ekaznyra@sec:~$ open contribution-activity ↗</code>
-</div>
-
-<br/>
-
-<!-- ─── CONTRIBUTION SNAKE ─────────────────────────────────────── -->
+<!-- ─── CONTRIBUTION STREAM ────────────────────────────────────── -->
 
 <div align="center">
   <code>ekaznyra@sec:~$ ./snake.sh --eat-contributions</code>
@@ -58,7 +52,7 @@
 <br/>
 
 <div align="center">
-  <img width="96%" src="assets/snake.svg" alt="Contribution Snake"/>
+  <img width="100%" src="assets/snake.svg" alt="Contribution Snake"/>
 </div>
 
 <br/>
@@ -81,15 +75,13 @@
   <a href="https://github.com/ekaznyra">
     <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=22d3ee&labelColor=0d1117" alt="GitHub"/>
   </a>
+  <br/><br/>
   <a href="https://t.me/ekaznyra">
     <img src="https://img.shields.io/badge/Telegram-0d1117?style=for-the-badge&logo=telegram&logoColor=22d3ee&labelColor=0d1117" alt="Telegram"/>
   </a>
   <a href="https://linkedin.com/in/ekaznyra">
     <img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=22d3ee&labelColor=0d1117" alt="LinkedIn"/>
   </a>
-
-  <br/><br/>
-
   <img src="https://hits.sh/github.com/ekaznyra.svg?style=for-the-badge&label=VISITORS&color=22d3ee&labelColor=0d1117" alt="Profile Views"/>
 </div>
 

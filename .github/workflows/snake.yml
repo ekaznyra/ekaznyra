@@ -38,6 +38,7 @@ jobs:
       - name: Strip stray progress bar artifact
         run: |
           sed -i 's/\.u{/\.u{display:none;/' assets/snake.svg
+          sed -i 's/viewBox="-16 -32 880 192"/viewBox="-16 -32 880 160"/' assets/snake.svg
 
       - name: Commit & Push
         uses: stefanzweifel/git-auto-commit-action@v5
