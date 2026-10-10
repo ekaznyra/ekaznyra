@@ -74,19 +74,19 @@
 <br/>
 
 <div align="center">
-  <a href="mailto:anhtunguyen.sec@proton.me">
+  <a href="mailto:anhtunguyen.sec@proton.me" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/ProtonMail-0d1117?style=for-the-badge&logo=protonmail&logoColor=22d3ee&labelColor=0d1117" alt="ProtonMail"/>
   </a>
-  <a href="https://nguyenngocanhtu.software/">
+  <a href="https://nguyenngocanhtu.software/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Website-0d1117?style=for-the-badge&logo=hugo&logoColor=22d3ee&labelColor=0d1117" alt="Website"/>
   </a>
-  <a href="https://github.com/ekaznyra">
+  <a href="https://github.com/ekaznyra" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=22d3ee&labelColor=0d1117" alt="GitHub"/>
   </a>
-  <a href="https://t.me/ekaznyra">
+  <a href="https://t.me/ekaznyra" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Telegram-0d1117?style=for-the-badge&logo=telegram&logoColor=22d3ee&labelColor=0d1117" alt="Telegram"/>
   </a>
-  <a href="https://linkedin.com/in/ekaznyra">
+  <a href="https://linkedin.com/in/ekaznyra" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=22d3ee&labelColor=0d1117" alt="LinkedIn"/>
   </a>
 
