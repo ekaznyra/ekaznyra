@@ -35,6 +35,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Strip stray progress bar artifact
+        run: |
+          sed -i 's/\.u{/\.u{display:none;/' assets/snake.svg
+
       - name: Commit & Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
