@@ -1,4 +1,5 @@
-<svg viewBox="-7.1 0 914.2 190" width="900" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New',Consolas,ui-monospace,monospace">
+<svg role="img" aria-label="MOD-04 TELEMETRY ? detection radar and metrics" viewBox="-7.1 0 914.2 190" width="900" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New',Consolas,ui-monospace,monospace">
+  <title>MOD-04 // TELEMETRY ? detection radar</title>
   <defs>
     <linearGradient id="m4panel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0d111a"/>

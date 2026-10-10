@@ -58,6 +58,16 @@ jobs:
                       print(f"[-] Fatal Error: Missing viewBox invariant in {asset} (Unscalable Vector)", file=sys.stderr)
                       sys.exit(1)
 
+                  # Verify accessibility standards (WCAG A11y Invariants)
+                  if svg.get("role") != "img":
+                      print(f"[-] Fatal Error: Missing role='img' accessibility contract in {asset}", file=sys.stderr)
+                      sys.exit(1)
+
+                  title_el = svg.find("{http://www.w3.org/2000/svg}title")
+                  if title_el is None or not title_el.text:
+                      print(f"[-] Fatal Error: Missing <title> accessibility descriptor in {asset}", file=sys.stderr)
+                      sys.exit(1)
+
               # Validate Markdown Memory Pointers
               readme_path: Path = root / "README.md"
               if not readme_path.exists():
